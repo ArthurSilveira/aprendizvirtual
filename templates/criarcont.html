@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block linkcss %}
+{% endblock %}
+
+{% block js %}
+    <script src={{ url_for('static', filename='scripts/criarcont.js') }}>
+    </script>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'estilo/estilocriacont.css')}}">
+{% endblock %}
+
+{% block conteudo %}
+<div class="principal">    
+  <h1 class="titulo-alinhamento">Criar Conteúdos</h1>
+    <form enctype="multipart/form-data" action={{ url_for('addcont', materianome=materia) }} method="POST">
+        <fieldset id="formcriador" class="formulario">
+            <div>
+              <label for="titulo">Titulo:</label><br>
+              <div class="div-barratexto">
+                <input class="barratexto" type="text" id="titulo" name="titulo" placeholder="Titulo do Conteúdo"></input><br>
+              </div>
+            </div>
+            <div id="adicionarbloco">
+                <h2>Formato do conteúdo:</h2>
+              <div class="div-butoes">
+                <button class="butao" type="button" onclick="gerarblocotxt()">Texto</button>
+                <button class="butao" type="button" onclick="gerarblocoimg()">Imagem</button>
+              </div>
+            </div>
+            <input type="hidden" id="txtquant" name="txtquant" value=0></input>
+            <input type="hidden" id="imgquant" name="imgquant" value=0></input>
+            <input type="hidden" id="txtordem" name="txtordem" value=""></input>
+            <input type="hidden" id="imgordem" name="imgordem" value=""></input>
+            <div class="div-butoes">
+                <button class="butao" type="submit">Criar conteúdo</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}

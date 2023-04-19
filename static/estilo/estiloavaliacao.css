@@ -1,0 +1,120 @@
+.div-avaliacao {
+  margin: auto 10%;
+}
+
+.cabecalho {
+  margin-bottom: 3%;
+  color: var(--color-fonte-cont);
+}
+
+.titulo {
+  font-size: 3em;
+}
+
+.bloco-aval {
+  background-color: var(--bg-principal);
+  padding: 2em;
+  border-radius: 15px;
+}
+
+.minha-aval {
+  margin: 3em auto 3em;
+  width: 90%;
+  color: var(--color-fonte);
+  background-color: var(--bg-caixa-cont);
+  padding: 0.5em 1.5em 0.5em;
+  border-radius: 15px;
+  border: 3px groove var(--color-fonte);
+}
+
+.butao {
+  font:bold 15px Helvetica;
+  font-style:normal;
+  background: var(--color-fonte);
+  color: var(--bg-menu);
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  padding: 8px 4px;
+  margin: auto auto 1em;
+}
+
+.butao:hover {
+  transition: 0.2s;
+  background: var(--bg-menu);
+  color: var(--color-fonte);
+}
+
+.comentario {
+  width: 99%;
+  margin: 2% 0 2%;
+  height: 20px;
+  border-radius: 7px;
+  padding: 5px;
+  background-color: var(--color-fonte);
+}
+
+.texto-comentario {
+  border: none;
+  width: 100%;
+  outline: none;
+  background-color: var(--color-fonte);
+}
+
+.login-aval {
+  display: block;
+  color: var(--color-fonte);
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.login-aval:hover {
+  transition: 0.2s;
+  transform: translate(3%, 0);
+}
+
+.avalusers {
+  margin: 3em auto 3em;
+  width: 90%;
+  color: var(--color-fonte);
+  background-color: var(--bg-avalia);
+  padding: 0.5em 1.5em 0.5em;
+  border-radius: 15px;
+}
+
+/* Estilo da estrela */
+.cor-estrela-verde {
+  background: var(--estrela-verde);
+  color: var(--color-fonte);
+  width: 8em;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.cor-estrela-vermelha {
+  background: var(--estrela-vermelha);
+  color: var(--color-fonte);
+  width: 8em;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.cor-estrela-amarela {
+  background: var(--estrela-amarela);
+  color: var(--color-fonte);
+  width: 8em;
+  text-align: center;
+  border-radius: 3px;
+}
+/* ---------------- */
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ff0000;
+  border-radius: 50%;
+}
+

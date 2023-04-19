@@ -1,0 +1,185 @@
+.principal {
+  box-sizing: border-box;
+  min-height: 80vh;
+  min-width: 80vw;
+  margin-right: 10%;
+  margin-left: 10%;
+  position: absolute;
+}
+
+.sub-principal {
+  box-sizing: border-box;
+  min-height: 80vh;
+  margin: 2em;
+  border-radius: 15px;
+  background: var(--bg-principal);
+  padding: 1em;
+}
+
+.div-verificar {
+  padding: 0.5% 2% 1%;
+  width: 92%;
+  margin: 2%;
+  color: #fff;
+  border: none;
+  background-color: var(--bg-fundo);
+  border-radius: 15px;
+}
+
+.verificar-conteudo {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  flex-wrap: nowrap;
+  margin: 0px;
+  height: 9em;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.conteudo-caixa2 {
+  border: none;
+  border-radius: 15px;
+  background-color: var(--bg-caixa);
+  padding: 0.75em;
+  margin: 7px;
+  width: 13em;
+  height: 6.25rem;
+  overflow: auto;
+}
+
+.novo-caixa {
+  border: none;
+  border-radius: 15px;
+  background-color: var(--bg-caixa-cont);
+  padding: 0.5em 1em 0.5em;
+  max-width: 92.7%;
+  margin: 2%;
+  color:#fff;
+  max-height: 3em;
+}
+
+.buscamat {
+  width: 94.2%;
+  margin: 2% 2% 1%;
+  height: 20px;
+  border-radius: 7px;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.texto-buscamat {
+  border: none;
+  width: 80%;
+  outline: none;
+}
+
+.div-conteudos {
+  width: 89%;
+  height: 59%;
+  margin: 0 5% 0;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.conteudo-caixa {
+  border: none;
+  border-radius: 15px;
+  background-color: var(--bg-caixa-cont);
+  padding: 1em;
+  width: 26%;
+  height: 8rem;
+  margin: 1% 2% 2%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.h2home {
+  color: var(--color-fonte);
+  font-size: 1em;
+  text-align: center;
+}
+
+.h2home:hover {
+  transition: 0.2s;
+  border: 0;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.h3home {
+  color: var(--color-fonte);
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Estilo dos scrolls */
+
+.div-conteudos::-webkit-scrollbar {
+  width: 12px;
+}
+
+.div-conteudos::-webkit-scrollbar-track {
+  background: var(--bg-caixa);
+  border-radius: 20px;
+}
+
+.div-conteudos::-webkit-scrollbar-thumb {
+  background-color: var(--bg-fundo);
+  border-radius: 20px;
+  border: 3px solid var(--bg-caixa); 
+}
+
+.conteudo-caixa::-webkit-scrollbar {
+  width: 12px;
+}
+
+.conteudo-caixa::-webkit-scrollbar-track {
+  background: var(--bg-fundo);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.conteudo-caixa::-webkit-scrollbar-thumb {
+  background-color: var(--bg-caixa);
+  border-radius: 20px;
+  border: 3px solid var(--bg-fundo); 
+}
+
+.conteudo-caixa2::-webkit-scrollbar {
+  width: 10px;
+}
+
+.conteudo-caixa2::-webkit-scrollbar-track {
+  background: var(--bg-caixa);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.conteudo-caixa2::-webkit-scrollbar-thumb {
+  background-color: var(--bg-fundo);
+  border-radius: 20px;
+  border: 3px solid var(--bg-caixa); 
+}
+
+.verificar-conteudo::-webkit-scrollbar {
+  height: 10px;
+}
+
+.verificar-conteudo::-webkit-scrollbar-track {
+  background: var(--bg-caixa);
+  border-radius: 20px;
+}
+
+.verificar-conteudo::-webkit-scrollbar-thumb {
+  background-color: var(--bg-fundo);
+  border-radius: 20px;
+  border: 2px solid var(--bg-caixa); 
+}

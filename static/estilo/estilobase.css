@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  /* Cores base */
+  --bg-fundo: #dedede;
+  --color-fonte: #fff;
+  --bg-menu: #171f4d;
+  --bg-cabeçalho-1: rgb(23,31,77) linear-gradient(90deg, rgba(23,31,77,1) 21%, rgba(49,60,144,1) 64%, rgba(58,72,177,1) 100%);
+  --bg-cabeçalho-2: rgb(23,31,77);
+  --bg-icon: #2b4173;
+  --color-icon: #fff;
+  --color-icon-hover: #000;
+  --bg-icon-hover: #3e7efe;
+  --bg-menu-reduzido: rgb(73, 80, 188);
+  /*  */
+
+  /* Cores home */
+  --bg-principal-home: rgb(23,31,77) linear-gradient(90deg, rgba(23,31,77,1) 21%, rgba(49,60,144,1) 64%, rgba(58,72,177,1) 100%);
+  --bg-caixa: #3744a9;
+  --bg-butao-hover: #2c3568;
+  /*  */
+
+  /* Cores materias */
+  --bg-principal: rgb(23,31,77);
+  --bg-caixa-cont: #3744a9;
+  /*  */
+
+  /* Cores materias */
+  --color-fonte-cont: #383838;
+  /*  */
+
+  /* Cores conteudo */
+  --color-link-avaliacoes: #fffab8;
+  /*  */
+
+  /* Cores avaliações */
+  --bg-avalia: #3744a9;
+  --estrela-verde: #0ecc00;
+  --estrela-vermelha: #cc0000;
+  --estrela-amarela: #dbbe00;
+  /*  */
+
+  /* Cores cadastro */
+  --bg-form-log: #fff;
+  --color-fonte-log: #404040;
+  --bg-butao-log: #3744a9;
+  /* */
+  
+  background-color: var(--bg-fundo);
+  color: var(--text-black);
+  min-height: 100vh;
+  padding: 0px 0px 0px;
+  margin: 0px;
+  font-family: 'Raleway', sans-serif;
+  transition: background 0.2s;
+  height: 100%;
+}
+
+.menu {
+    position: fixed;
+    left: -100px;
+    background-color: var(--bg-menu);
+    width: 100px;
+    height: 100%;
+    transition: all 0.1s;
+    top: 0;
+    z-index: 6;
+}
+
+.cabeçalho {
+    background: var(--bg-cabeçalho-1);
+    color: #fff;
+    height: 114px;
+    position: relative;
+    text-align: right;
+    z-index: 7;
+}
+
+.logo {
+    width: 25%;
+    right: 50px;
+}
+
+#barra-menu {
+  font-size: 95px;
+  color: var(--color-icon);
+  background-color: var(--bg-menu);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+#barra {
+  position: fixed;
+  top: 0;
+}
+
+input[type="checkbox"]:checked ~ nav
+{
+    transform: translateX(100px);
+}
+
+label#barra {
+    position: absolute;
+    z-index: 7;
+}
+
+.label-base:hover {
+  transition: 0.2s;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+#link {
+    background-color: var(--bg-icon);
+    width: 70px;
+    height: 50px;
+    font-size: 40px;
+    color: var(--color-icon);
+}
+
+#link:hover {
+  color: var(--color-icon-hover);
+  transition: 0.2s;
+}
+
+.icone, .s-icone {
+  width: 100px;
+  padding-left:0;
+  text-align:center;
+  padding-right: 0px;
+  margin-top: 30px;
+  color: var(--color-fonte);
+}
+
+.user-li {
+  font-size: 13px;
+  color: var(--font-white);
+  margin-top:0px;
+}
+
+.s-icone a:hover, li.tema:hover {
+  background-color: var(--bg-icon-hover);
+  transition: 0.2s;
+  color: var(--color-fonte);
+  cursor: pointer;
+}
+
+.s-icone a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/*pq tem 2 s-icone com o padding-top diferente?*/
+
+ul {
+    top: 150px;
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    list-style: none;
+    display: block;
+    width: 100%;
+    padding: 15px;
+}
+
+#botao-tema { 
+  font:bold 20px Helvetica;
+  padding: 5px;
+  font-style:normal;
+  color:rgba(23,31,77,1);
+  background: var(--color-icon);
+  border-radius:4px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+#botao-tema:hover {
+  color: var(--color-icon-hover);
+  transition: 0.2s;
+}
+
+.space-bottom {
+  margin-top: 80px;
+  width: 100%;
+  height: 50px;
+}
+
+@media(max-width: 1000px){
+  .menu{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    left: 0;
+    top: -300px;
+    background-color: var(--bg-menu-reduzido);
+  }
+    
+  input[type="checkbox"]:checked ~ nav
+  {
+      transform: translateY(300px);
+  }
+
+  ul {
+    top: -30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cabeçalho {
+    background: var(--bg-cabeçalho-1);
+  }
+
+  .icone, .s-icone {
+    width: 100px;
+    padding-left:0;
+    text-align:center;
+    padding-right: 0px;
+    margin-top: 30px;
+    height: 50px;
+  }
+
+  .s-icone a {
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
+}
+
+.dark-mode {
+  /* Cores base */
+  transition: 0.2s;
+  --bg-fundo: rgb(14, 21, 37);
+  --color-fonte: rgb(174, 181, 203);
+  --bg-menu: rgb(28, 35, 51);
+  --bg-cabeçalho-1: rgb(28, 35, 51);
+  --bg-icon: rgb(60, 66, 88);
+  --color-icon: rgb(174, 181, 203);
+  --color-icon-hover: rgb(15, 17, 21);
+  --bg-icon-hover: rgb(84, 89, 109);
+  --bg-menu-reduzido: rgb(60, 66, 88);
+  /*  */
+
+  /* Cores home */
+  --bg-principal-home: rgb(28, 35, 51);
+  --bg-caixa: rgb(46, 68, 127);
+  --bg-butao-hover: rgb(24, 29, 43);
+  /*  */
+
+  /* Cores materias */
+  --bg-principal: rgb(28, 35, 51);
+  --bg-caixa-cont: rgb(14, 21, 37);
+  /*  */
+
+  /* Cores materias */
+  --color-fonte-cont: rgb(132, 138, 154);
+  /*  */
+
+    /* Cores conteudo */
+  --color-link-avaliacoes: #a8a361;
+  /*  */
+  
+  /* Cores avaliações */
+  --bg-avalia: rgb(14, 21, 37);
+  --estrela-verde: #1b3e18;
+  --estrela-vermelha: #4a1c1c;
+  --estrela-amarela: #5c541f;
+  /*  */
+
+  /* Cores cadastro */
+  --bg-form-log: rgb(60, 66, 88);
+  --color-fonte-log: rgb(174, 181, 203);
+  --bg-butao-log: rgb(28, 35, 51);
+  /* */
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    width: 12px;
+    box-shadow: inset 0 0 .3rem #fff5;
+    background-color: var(--bg-fundo);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--text-black);
+}
+
+.darken-image {
+  filter: brightness(70%);
+}

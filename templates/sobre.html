@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block linkcss %}
+    <link rel="stylesheet" href="{{url_for('static', filename = 'estilo/estilosobre.css')}}">
+{% endblock  %}
+
+{% block conteudo %}
+    <div class="conteudo">
+        <h2 class="titulo">Sobre nós</h2>
+      
+        <h3>Quem somos</h3>
+        <div class="texto">
+        <p>Olá, é um grande prazer tê-lo em nosso site! Nós somos a equipe de desenvolvimento, composta por 4 alunos cursantes do curso Técnico em Informática do IFMG Sabará cujo nossos nomes são Arthur Silveira, Guilherme Souza, Juan Lucas e Maria Luiza. Desejamos que todos possam ter a melhor experiencia possível ao utilizar nosso site e nunca se esqueça, “seu futuro depende de você!”.</p>
+        
+        <div class="imagem"><img src={{url_for('static', filename='imagens/ifmgsabara.jpg')}}><p>IFMG - Campus Sabará</p></div>
+        </div>
+
+        <h3>Objetivo</h3>
+        <div class="texto">
+        <p>Nosso objetivo é proporcionar um ambiente de estudo online simples, onde todos poderão criar e nos enviar conteúdos educacionais que serão previamente revisados por nossa equipe. Caso a equipe julgue esses materiais relevantes, eles serão disponibilizados no site para que todos os usuários possam utilizá-los como forma de enriquecer ainda mais seus estudos.</p>
+        </div>
+
+        <h3>Ideia</h3>
+        <div class="texto">
+        <p>A ideia inicial do site surgiu por meio de um trabalho escolar iniciado no ano de 2020, onde alguns instrutores do IFMG (“Instituto Federal de Minas Gerais”) nos propuseram que ao nos separarmos em alguns grupos, pensássemos, planejássemos e desenvolvêssemos, ao longo de 3 longos anos, uma solução para algum problema do cotidiano.</p>
+        <p>Ao nos encontrarmos em um contexto de pandemia, acabamos observando a extrema dificuldade que grande parte do ambiente escolar estava tendo para se adequar a uma nova forma, não convencional, de ensino a distância, que por consequência acarretou em um menor aproveitamento dos estudantes em relação ao aprendizado. Isto nos levou a pensar, “porque não criamos um site de ensino focado a ajudar aos professores, alunos e as outras pessoas que tivessem interesse em aprender mais” a partir deste pensamento e após inúmeras pesquisas que surgiu o “Aprendiz Virtual”.</p>
+        </div>
+    </div>
+    <div class="space-bottom"></div>
+{% endblock %}

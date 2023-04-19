@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block linkcss %}
+<link rel="stylesheet" href="{{url_for('static', filename = 'estilo/estiloperfil.css')}}">
+{% endblock %}
+
+{% block conteudo %}
+    <div class="div-perfil">
+        <h1 class="titulo">Perfil de usuário</h1>
+        <div class="perfil-info">
+            <div class="info-block">
+                <h2>Nome de Usuário</h2>
+                <p>{{g.user.tag}}</p>
+            </div>
+            <div class="info-block">
+                <h2>E-mail atual</h2>
+                <p>{{g.user.email}}</p>
+            </div>
+            <form action="{{ url_for('logout') }}" method="post">
+                <button class="butao">Sair</button>
+            </form>
+        </div>
+        {% if conteudos != [] %}
+        <h1 class="titulo">Seus conteúdos:</h1>
+        <div class="div-conteudos">
+            {% for conteudo in conteudos %}
+                <div class="conteudo-caixa">
+                    <a href={{url_for('pagconteudo', materianome=conteudo.materia, conteudolink=conteudo.link) }}>
+                        <h2 class="h2home">{{conteudo.titulo}}</h2>
+                    </a>
+                    <h2 class="h3home">Materia: {{conteudo.materianome}}</h2>
+                    <h2 class="h3home">Tipo de mídia: {{conteudo.tipo}}</h2>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}

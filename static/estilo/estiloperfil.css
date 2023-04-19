@@ -1,0 +1,126 @@
+.div-perfil {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2% 10%;
+  color: var(--color-fonte-cont)
+}
+
+.titulo {
+  text-align: center;
+}
+
+.perfil-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 2em auto;
+}
+
+.info-block {
+    display: block;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    width: 190px;
+}
+
+.butao {
+  font:bold 15px Helvetica;
+  font-style:normal;
+  background: var(--color-fonte);
+  color: var(--bg-menu);
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  height: 5vh;
+  width: 5vw;
+  min-height: 40px;
+  min-width: 90px;
+  cursor: pointer;
+}
+
+.butao:hover {
+  transition: 0.2s;
+  background: var(--bg-menu);
+  color: var(--color-fonte);
+}
+
+.div-conteudos {
+  width: 89%;
+  height: 70%;
+  margin: 0 5% 0;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.conteudo-caixa {
+  border: none;
+  border-radius: 15px;
+  background-color: var(--bg-menu);
+  padding: 1em;
+  width: 26%;
+  height: 8rem;
+  margin: 1% 2% 2%;
+  overflow: hidden;
+}
+
+.h2home {
+  color: var(--color-fonte);
+  font-size: 1em;
+  text-align: center;
+}
+
+.h2home:hover {
+  transition: 0.2s;
+  border: 0;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.h3home {
+  color: var(--color-fonte);
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+.div-conteudos::-webkit-scrollbar {
+  width: 12px;
+}
+
+.div-conteudos::-webkit-scrollbar-track {
+  background: var(--bg-caixa);
+  border-radius: 20px;
+}
+
+.div-conteudos::-webkit-scrollbar-thumb {
+  background-color: var(--bg-white);
+  border-radius: 20px;
+  border: 3px solid var(--bg-caixa); 
+}
+
+.conteudo-caixa::-webkit-scrollbar {
+  width: 12px;
+}
+
+.conteudo-caixa::-webkit-scrollbar-track {
+  background: var(--bg-fundo);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.conteudo-caixa::-webkit-scrollbar-thumb {
+  background-color: var(--bg-caixa);
+  border-radius: 20px;
+  border: 3px solid var(--bg-fundo); 
+}

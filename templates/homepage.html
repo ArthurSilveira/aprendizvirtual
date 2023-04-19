@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block linkcss %}
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'estilo/estilohome.css') }}">
+{% endblock  %}
+{% block js %}
+    <script src={{ url_for('static', filename='scripts/homepage.js') }}></script>
+{% endblock %}
+{% block conteudo%}
+
+  {% with mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+      <div style="padding: 0; margin: 0;">
+        {% for mensagem in mensagens %}
+          <p style="color: red;">{{ mensagem }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <div class="principal">
+    <div class="sub-principal">
+
+      <div class="bemvindo">
+        <div><h1 class="bemvindo-txt1">Bem Vindo ao Aprendiz Virtual!</h1></div>
+        <div><h2 class="bemvindo-txt2">Escolha uma área de ensino para filtrar melhor os materiais.</h2></div>
+      </div>
+
+      <div class="materias">
+          {% with mensagens = get_flashed_messages() %}
+              {% if mensagens %}
+                  <ul>
+                      {% for mensagem in mensagens %}
+                          <li style="color: red;">{{ mensagem }}</li>
+                      {% endfor %}
+                  </ul>
+              {% endif %}
+          {% endwith %}
+          
+          {% if 'user' in g %}
+              {% if g.user.verificado == 1 %}
+                <div class="caixa">
+                  <button id="addmatbutton" class="butao1" onclick="addmat()"><i class="bi bi-plus-circle-fill"></i> Adicionar</button>
+                  <form id="addmatform" style="display: none;" action="nova_materia" method="POST">
+                      <fieldset style="border: none;">
+                          <div>
+                              <div>
+                                <input type="text" id="nomemat" name="nomemat" placeholder="Nome da matéria..."></input><br>
+                              </div>
+                          </div>
+                          <div>
+                               <button class="butao2" type="submit">Criar Matéria</button>
+                          </div>
+                      </fieldset>
+                  </form>
+                </div>
+              {% endif %}
+          {% endif %}
+          
+          {% for materia in materias %}
+              <div class="caixa">
+                  <a href={{ url_for('materia', materialink=materia.link) }}>
+                      <h2 class="h2home">{{materia.nome}}</h2>
+                  </a>
+              </div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

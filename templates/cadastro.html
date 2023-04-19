@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block linkcss %}
+    <link rel="stylesheet" href="{{url_for('static', filename = 'estilo/estilocadastro.css')}}">
+{% endblock  %}
+
+{% block conteudo %}
+
+<div class="container">
+  
+        <div class="form-image">
+            <a id="logo" href="{{ url_for('home') }}"><img src="static/imagens/logomaiorsemfundo.png/" alt=""></a>
+            <p class="fraseLogo">Seu futuro depende de você</p>
+        </div>
+  
+        <div class="form">
+            <form action={{ url_for("cadastropag") }} method=POST>
+                <div class="form-header">
+                  <h1>Cadastre-se</h1>
+                    
+                    <div class="login-button">
+                        <button type="button">
+                          <a href="{{ url_for('login')}}">Login</a></button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="teste" for="tag" class="teste">Nome</label>
+                        <input class="insert" id="tag" type="text" name="tag" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label class="teste" for="email">E-mail</label>
+                        <input class="insert" id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label class="teste" for="senha">Senha</label>
+                        <input class="insert" id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+                </div>
+                
+                <div class="continue-button">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+</div>
+{% endblock %}

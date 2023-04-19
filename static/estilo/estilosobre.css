@@ -1,0 +1,31 @@
+.conteudo {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 0.2em 2em;
+  background-color: var(--bg-fundo);
+  color: var(--color-fonte-cont);
+}
+
+.titulo {
+  font-size: 3em;
+}
+
+.imagem {
+  max-height: 40vh;
+  width: 100%;
+  text-align: center;
+  padding: 1em 0em;
+}
+
+.imagem img {
+    max-width: 23vw;
+    background-color: white;
+    border: 2px solid var(--color-fonte-cont);
+    border-radius: 3px;
+}
+
+.texto {
+    box-sizing: border-box;
+    font-size: 2vh;
+    text-align: justify;
+}

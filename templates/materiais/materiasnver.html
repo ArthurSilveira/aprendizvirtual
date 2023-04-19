@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block linkcss %}
+    <link rel="stylesheet" href="{{url_for('static', filename = 'estilo/estilomateriasnver.css')}}">
+{% endblock  %}
+{% block conteudo %}  
+
+    <div class="principal">
+        <div class="novo-caixa">
+            <a href={{ url_for('addcont', materianome=materia) }}>
+                <h2 class="h2home"><i class="bi bi-plus-circle-fill"></i> Novo Conteudo</h2>
+            </a>
+        </div>
+        <!--
+        <div class="buscamat">
+            <i class="bi bi-search" style="margin: 0 7px 0; color: var(--bg-caixa);"></i>
+            <input class="texto-buscamat" type="text" id="buscamat" name="buscamat" placeholder="Buscar matéria..."></input><br>
+        </div>
+        -->
+        <div class="div-conteudos">
+            {% for conteudo in conteudos %}
+                <div class="conteudo-caixa">
+                    <a href={{url_for('pagconteudo', materianome=materia, conteudolink=conteudo.link) }}>
+                        <h2 class="h2home">{{conteudo.titulo}}</h2>
+                    </a>
+                    <h2 class="h3home">Feito por: {{conteudo.userctag}}</h2>
+                    <h2 class="h3home">Tipo de mídia: {{conteudo.tipo}}</h2>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

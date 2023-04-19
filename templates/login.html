@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block linkcss %}
+    <link rel="stylesheet" href="{{url_for('static', filename = 'estilo/estilocadastro.css')}}">
+{% endblock  %}
+
+{% block conteudo %}
+
+<div class="container">
+  
+  <div class="form-image">
+    <img src="static/imagens/logomaiorsemfundo.png/" alt="">
+    <p class="fraseLogo">Seu futuro depende de você</p>
+  </div>
+  
+  <div class="form">
+    
+    <div class="form-header">
+      <div class="title">
+        <h1>Fazer Login</h1>
+      </div>
+
+      <div class="login-button">
+        <button type="button">
+          <a href="{{ 
+            url_for('cadastropag')}}">Cadastrar</a></button>
+      </div>
+    </div>
+
+    <form action={{ url_for("login") }} method="POST">
+        <fieldset style="border: none;">
+            <div class="input-group">
+                <div class="input-box">
+                    <label class="teste" for="email">Email:</label><br>
+                    <input class="insert" type="email" id="email" name="email" placeholder="Digite seu email"></input><br>
+                </div>
+                <div class="input-box">
+                    <label class="teste" for="senha">Senha:</label><br>
+                    <input class="insert" type="password" id="senha" name="senha" placeholder="Digite sua senha"></input><br>
+                </div>
+            </div>
+          
+    {% with mensagens = get_flashed_messages() %}
+        {% if mensagens %}
+            <div style="padding: 0; margin: 0;">
+                {% for mensagem in mensagens %}
+                    <p style="color: red;">{{ mensagem }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+          
+            <div class="continue-button">
+                 <button class="submit" type="submit" id="entrar">Entrar</button>
+            </div>
+        </fieldset>
+    </form>
+  
+  </div>
+</div>
+{% endblock %}
